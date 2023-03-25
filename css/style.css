@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background-color: #0F0D13;
+}
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "A B" "A C";
+  grid-template-columns: max-content max-content;
+  gap: 32px;
+  place-content: center;
+}
+.player {
+  background-color: #2A2141;
+  padding: 28px;
+  border-radius: 10px;
+  width: 356px;
+}
+
+.player  img {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.info-wrapper {
+  display: flex;
+  gap: 28px;
+}
+#player-1 {
+  grid-area: A;
+  padding: 50px 32px;
+}
+
+#player-1.wrapper {
+  width: 190px;
+}
+
+#player-1 img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+#player-1 .info {
+  margin-top: 28px;
+}
+
+#player-2 {
+  grid-area: B;
+  height: fit-content;
+}
+#player-3{
+  grid-area: C;
+}
+.info {
+  color: #E1E1E6;
+  
+}
+.info h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 9.6px;
+}
+.info p {
+  opacity: .67;
+  font-weight: 400;
+  font-size: 19px;
+  -webkit-font-smoothing: antiliased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.controls {
+  margin-top: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+.horizontal .controls {
+  padding-inline: 58px;
+}
+.controls ion-icon {
+  color: #E1E1E6;
+  width: 28px;
+  height: 28px;
+}
+.track-time {
+  margin-top: 28px;
+}
+.track-time .track {
+  position: relative;
+}
+.track-time .track::before {
+  position: absolute;
+  content: '';
+  height: 6px;
+  width: 100%;
+  display: block;
+  background-color: #D9D9D9;
+  opacity: .3;
+  border-radius: 6px;
+  z-index: 1;
+}
+.track-time .track::after {
+  content: '';
+  height: 6px;
+  width: 80%;
+  display: block;
+  background-color: #D9D9D9;
+  border-radius: 6px;
+}
+
+.track-time .time {
+  font-size: 14px;
+  opacity: .7;
+  color: #c4c4cc;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+@media (max-width: 720px){
+  .container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: auto;
+    max-width: 400px;
+    margin-top: 28px;
+  }
+  .horizontal .controls {
+    padding-inline: 32px;
+  }
+}
